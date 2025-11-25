@@ -178,14 +178,21 @@ main.solutionMode #scorePanel{grid-column:1/-1;margin-top:20px;}
 
   <!-- Lock Screen -->
   <div id="lockScreen">
-    <div class="box">
-      <h2>Enter Password to Start Test</h2>
-      <input id="studentName" type="text" placeholder="Student Name" />
-      <input id="testPass" type="password" placeholder="Password" />
-      <button class="btn primary" id="startBtn">Start Test</button>
-      <p id="errorMsg" style="color:#ef4444;font-size:13px;display:none;">Invalid name or password</p>
+  <div class="box">
+
+    <!-- 🔥 Inserted Logo -->
+    <div class="logoLock">
+      <img src="https://i.ibb.co/WNZTWPwv/LOGO-PNG-2025-fab.png" style="width:90px; margin-bottom:12px;">
     </div>
+    <!-- 🔥 End Logo -->
+
+    <h2>Intermediate MCQ</h2>
+    <input id="studentName" type="text" placeholder="Student Name" />
+    <input id="testPass" type="password" placeholder="Password" />
+    <button class="btn primary" id="startBtn">Start Test</button>
+    <p id="errorMsg" style="color:#ef4444;font-size:13px;display:none;">Invalid name or password</p>
   </div>
+</div>
 
   <header>
     <div class="wrap">
@@ -590,4 +597,5 @@ document.getElementById("startBtn").addEventListener("click", function () {
   </script>
 </body>
 </html>
+
 
