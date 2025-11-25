@@ -152,6 +152,49 @@ main.solutionMode #scorePanel{grid-column:1/-1;margin-top:20px;}
     #lockScreen{position:fixed;inset:0;background:var(--bg);display:flex;justify-content:center;align-items:center;z-index:99999;}
     #lockScreen .box{background:var(--panel);padding:30px;border-radius:16px;text-align:center;max-width:320px;width:100%;}
     #lockScreen input{margin:8px 0;padding:10px;width:100%;border-radius:10px;border:1px solid #374151;background:#0b1220;color:var(--text)}
+ /* 📌 FIX — mobile responsive lockscreen + instruction panel */
+@media (max-width: 600px) {
+
+  /* Instruction panel moves UP when lock screen is visible */
+  #instructionBox {
+    bottom: 0;
+    max-height: 35vh;
+    overflow-y: auto;
+    padding: 14px;
+  }
+
+  /* Lock screen form fully visible */
+  #lockScreen .box {
+    width: 92%;
+    max-width: 340px;
+    padding: 20px 16px;
+    margin: 0 10px;
+  }
+
+  #lockScreen input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  #lockScreen h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* Space between panel & keypad */
+  body {
+    padding-bottom: 36vh; /* ensures lock box is not hidden behind instruction box */
+  }
+}
+
+/* Extra safeguard for very small phones */
+@media (max-height: 580px) {
+  #lockScreen {
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -597,5 +640,6 @@ document.getElementById("startBtn").addEventListener("click", function () {
   </script>
 </body>
 </html>
+
 
 
